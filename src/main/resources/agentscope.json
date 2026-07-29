@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agentscope.io/schema/agentscope.json",
+  "main": "default",
+  "agents": {
+    "default": {
+      "name": "Claw",
+      "description": "Primary harness agent",
+      "workspace": "workspace",
+      "maxIters": 15,
+      "sysPrompt": "You are a helpful local assistant. Answer accurately and concisely."
+    },
+    "worker": {
+      "name": "Worker",
+      "description": "Secondary agent with its own workspace",
+      "workspace": "agents/worker/workspace",
+      "maxIters": 10
+    }
+  },
+  "channels": {
+    "chatui": {
+      "defaultAgentId": "default",
+      "dmScope": "MAIN",
+      "type" : "chatui"
+    }
+  }
+}

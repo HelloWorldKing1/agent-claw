@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: agent-claw
+server:
+  port: 8080
+
+claw:
+  home: ${CLAW_HOME:.agentscope/claw}
+  dashscope:
+    api-key: ${DASHSCOPE_API_KEY:}
+    model-name: ${CLAW_MODEL_NAME:qwen3.6-plus}
+    stream: true
